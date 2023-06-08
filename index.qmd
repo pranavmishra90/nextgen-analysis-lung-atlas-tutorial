@@ -1,0 +1,16 @@
+## About
+
+This repository is following a tutorial created by Mark Sanborn ([\@Sanbiomics](https://www.youtube.com/@sanbomics)).
+
+## Data source
+
+Melms JC, Biermann J, Huang H, Wang Y et al. A molecular single-cell lung atlas of lethal COVID-19. Nature 2021 Jul;595(7865):114-119. PMID: 33915568
+
+``` sh
+# Download the data from GEO Accession
+wget ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE171nnn/GSE171524/suppl/GSE171524_RAW.tar
+
+# Extract the files
+tar -xf GSE171524_RAW.tar
+gunzip *gz
+```
