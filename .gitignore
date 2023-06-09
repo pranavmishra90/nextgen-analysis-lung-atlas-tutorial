@@ -1,5 +1,10 @@
+# Directories
+/.quarto/
+/_site/
+/env/
+
 *.csv
 *.csv.gz
 *.tar
-/.quarto/
-/_site/
+
+**/nohup.out

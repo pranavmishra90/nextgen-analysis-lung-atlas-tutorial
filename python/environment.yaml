@@ -1,0 +1,17 @@
+name: scanpy
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - python=3.10
+  - ipykernel
+  - datalad
+  - scanpy
+  - scvi-tools
+  - seaborn
+  - pandas
+  - numpy
+  - scipy
+  - scikit-misc
+  - nbconvert
+  - pipreqs
