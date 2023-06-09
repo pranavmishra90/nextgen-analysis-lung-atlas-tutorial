@@ -1,6 +1,12 @@
+---
+bibliography: references.bib
+---
+
+# Exploring single-cell RNA sequencing using COVID-19 lung data
+
 ## About
 
-This repository is following a tutorial created by Mark Sanborn ([\@Sanbiomics](https://www.youtube.com/@sanbomics)).
+This repository is following an excellent tutorial created by Mark Sanborn  ([\@Sanbiomics](https://www.youtube.com/@sanbomics)) on YouTube [-@sanborn2022]. scRNA-seq data is provided by @melms2021
 
 ## Data source
 
@@ -8,9 +14,26 @@ Melms JC, Biermann J, Huang H, Wang Y et al. A molecular single-cell lung atlas 
 
 ``` sh
 # Download the data from GEO Accession
-wget ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE171nnn/GSE171524/suppl/GSE171524_RAW.tar
+wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE171nnn/GSE171524/suppl/GSE171524_RAW.tar
 
 # Extract the files
-tar -xf GSE171524_RAW.tar
+tar -xf GSE171524_RAW.tar -C ./data/
+cd data
 gunzip *gz
 ```
+
+## Python packages required
+
+I prefer the python package manager `mamba`, which is a faster form of the ubiquitous `conda`. For convenience, I will show the command using conda below.
+
+``` sh
+# Install dependencies / libaries
+conda install -c conda-forge \
+    scipy \
+    scvi-tools \
+    scikit-misc \
+    leidenalg
+```
+## CPU vs. GPU 
+
+Using a GPU substantially increases the computational speed of Single Cell Variation Interface Tools (`scvi-tools`). 8 core CPUs perform about 7 times slower than a Google Colab notebook's free GPU.
